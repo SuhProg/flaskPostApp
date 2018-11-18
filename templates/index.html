@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>MyNetwork</title>
+  </head>
+  <body>
+<!-- POST METHOD -->
+    <form action="/" method="POST">
+      <input type="text" name="name" placeholder="name">
+      <input type="text" name="post" placeholder="Post Content">
+      <input type="submit" name="submit" value="Submit">
+    </form>
+<!-- displaying posts -->
+    {% for post in posts %}
+      <div> {{ post[1] + ': ' + post[2] }} </div>
+    {% endfor %}
+  </body>
+</html>
